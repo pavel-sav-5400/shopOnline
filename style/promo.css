@@ -1,0 +1,137 @@
+.main {
+    padding: 49px 0 190px;
+}
+
+.promo__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 245px);
+    gap: 60px;
+}
+
+.promo__item {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 20px;
+    color: #FFF;
+    border-radius: 20px;
+}
+
+.promo__text-normal {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 52px;
+}
+
+.promo__text-normal_weigth_regular {
+    font-weight: 400;
+    line-height: 120%;
+    border-radius: 20px;
+    background: #38C0EB;
+    padding: 28px 24px 29px 24px;
+}
+
+.promo__text-normal_style_uppercase {
+    color: #F91155;
+    line-height: 120%;
+    text-transform: uppercase;
+    padding: 32px 41px;
+    border-radius: 20px;
+    background: #FFF;
+}
+
+.promo__text-small {
+    font-size: 30px;
+    line-height: 39px;
+}
+
+.promo__text-small_weigth_regular {
+    font-weight: 400;
+}
+
+.promo__text-big {
+    display: block;
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 145%;
+}
+
+.promo__discount {
+    position: absolute;
+    background-color: #FFBD13;
+    border-radius: 50%;
+    padding: 24px 8px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 130%;
+}
+
+.promo__discount-bottom {
+    bottom: 20px;
+    right: 20px;
+}
+
+.promo__discount-top {
+    top: 20px;
+    left: 20px;
+}
+
+.promo__item_bg-image_book {
+    padding: 97px 20px 20px;
+    background-image: url("../image/book.jpg");
+}
+
+.promo__item_bg-image_clock {
+    padding: 78px 25px 128px 16px;
+    background-image: url("../image/clock.jpg");
+}
+
+.promo__item_bg-image_two-sneakers {
+    background-image: url("../image/two-sneakers.jpg");
+    grid-column: 3 / 5;
+    grid-row: 1/3;
+    padding: 350px 20px 22px 20px;
+}
+
+.promo__item_bg-image_gifts {
+    padding: 106px 180px 30px 30px;
+    background-image: url("../image/gifts.jpg");
+    grid-column: 5 / 7;
+}
+
+.promo__item_bg-image_sneaker {
+    background-image: url("../image/sneaker.jpg");
+    grid-column: 1 / 3;
+}
+
+.promo__item_bg-image_laptop {
+    padding: 163px 0 0 31px;
+    background-image: url("../image/laptop.jpg");
+    grid-column: 5 / 7;
+}
+
+.promo__item_bg-image_2022 {
+    background-image: url("../image/2022.jpg");
+    padding: 385px 467px 50px 50px;
+    grid-column: 1 / 5;
+    grid-row: 3 / 5;
+    text-align: center;
+}
+
+.promo__item_bg-image_woman {
+    background-image: url("../image/woman.jpg");
+    grid-row: 3 / 5;
+}
+
+.promo__item_bg-image_chemistry {
+    padding: 149px 48px 20px 20px;
+    background-image: url("../image/chemistry.jpg");
+}
+
+.promo__item_bg-image_christmas-toys {
+    background-image: url("../image/christmas-toys.jpg");
+    transform: scale(-1, 1);
+    background-position: left;
+}
