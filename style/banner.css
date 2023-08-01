@@ -1,7 +1,10 @@
 .banner {
-    background-image: url("../image/banner.jpg");
+    border-radius: 20px;
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%), url("../image/banner.jpg"), lightgray 0px -437.122px / 109.661% 286.301% no-repeat;
     padding: 152px 0 39px 112px;
     margin-bottom: 59px;
+    background-size: cover;
+    background-position: center;
 }
 
 .banner__text {

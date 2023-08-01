@@ -2,27 +2,20 @@
     padding: 33px 0 45px;
 }
 
-.header__logo {
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 41px;
-    letter-spacing: 2px;
-    margin-right: 28px;
-}
-
-.header__logo-blue {
-    letter-spacing: 3px;
-    color: #3670C7;
-}
-
 .header__block {
     display: grid;
-    grid-template-columns: 1fr 1fr 5fr auto;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: "logo logo menu menu search search search search search user-card user-card user-card";
     align-items: center;
-    gap: 93px;
+    gap: 60px;
+}
+
+.header__logo {
+    grid-area: logo;
 }
 
 .header__menu {
+    grid-area: menu;
     display: flex;
     max-width: 151px;
     align-items: center;
@@ -38,6 +31,7 @@
 }
 
 .header__search-wrapper {
+    grid-area: search;
     position: relative;
     display: flex;
 }
@@ -61,8 +55,10 @@
 }
 
 .user-cart {
+    grid-area: user-card;
     display: grid;
-    gap: 59px;
+    justify-items: flex-end;
+    gap: 30px;
     grid-template-columns: repeat(3, 1fr);
 }
 
@@ -79,8 +75,11 @@
     .header__block {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "logo . . user-card"
+            "menu search search search";
         justify-content: space-between;
-        gap: 30px 47px;
+        gap: 30px 0px;
     }
 
     .header__search {
@@ -88,23 +87,22 @@
     }
 
     .header__logo {
-        grid-column: 1 / 2;
+        grid-area: logo;
         margin-right: 0;
-        padding-top: 5px;
+        padding-top: 12px;
     }
 
     .header__menu {
-        grid-column: 1/2;
-        grid-row: 2/3;
+        grid-area: menu;
     }
 
-    .search {
-        grid-column: 2/5;
-        grid-row: 2/3;
+    .header__search-wrapper {
+        grid-area: search;
+        padding-left: 25px;
     }
 
     .user-cart {
-        grid-column: 4/5;
+        grid-area: user-card;
         gap: 41px;
     }
 
@@ -117,10 +115,11 @@
     .header {
         padding: 33px 0 23px;
     }
+
     .header__logo {
-        font-size: 26px;
-        letter-spacing: 3px;
-        padding: 0;
+        width: 165px;
+        height: 35px;
+        padding-top: 5px;
     }
 
     .user-cart {
@@ -154,6 +153,10 @@
         gap: 26px 0;
     }
 
+    .header__search-wrapper {
+        padding-left: 0;
+    }
+
     .header__search {
         font-size: 12px;
         font-weight: 700;
@@ -173,25 +176,28 @@
 
 @media (max-width: 640px) {
     .header {
-        padding: 20px 0 9px;
+        padding: 20px 0;
     }
+
     .header__block {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
-        gap: 10px 0;
+        grid-template-areas:
+            "logo ."
+            "menu user-card"
+            "search search";
+        gap: 18px 0;
         align-items: start;
     }
 
     .header__logo {
-        font-size: 18px;
-        letter-spacing: 2px;
-    }
-
-    .header__logo-blue {
-        letter-spacing: 2px;
+        grid-area: logo;
+        width: 114px;
+        height: 25px;
     }
 
     .header__menu {
+        grid-area: menu;
         padding: 6px 15px;
         font-size: 12px;
         line-height: 150%;
@@ -205,8 +211,7 @@
     }
 
     .user-cart {
-        grid-row: 2/3;
-        grid-column: 2/3;
+        grid-area: user-card;
         gap: 12px;
         justify-items: end;
     }
@@ -221,8 +226,7 @@
     }
 
     .header__search-wrapper {
-        grid-column: 1/3;
-        grid-row: 3/4;
+        grid-area: search;
     }
 
     .header__search {
